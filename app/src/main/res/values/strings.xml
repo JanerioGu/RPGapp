@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">RPGApp</string>
+
+    <!-- Definição das raças para o Spinner -->
+    <string-array name="races">
+        <item>Anão</item>
+        <item>Meio Orc</item>
+        <item>Humano</item>
+        <item>Alto Elfo</item>
+        <item>Anão da Colina</item>
+        <item>Anão da Montanha</item>
+        <item>Draconato</item>
+        <item>Drow</item>
+        <item>Elfo da Floresta</item>
+        <item>Elfo</item>
+        <item>Gnomo</item>
+        <item>Gnomo da Floresta</item>
+        <item>Gnomo das Rochas</item>
+        <item>Halflings</item>
+        <item>Halfling Pés Leves</item>
+        <item>Halfling Robusto</item>
+        <item>Meio Elfo</item>
+        <item>Tiefling</item>
+    </string-array>
+</resources>

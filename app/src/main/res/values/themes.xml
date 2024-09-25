@@ -1,0 +1,13 @@
+<resources>
+    <!-- Base theme for the app using Material 3 -->
+    <style name="Theme.RPGapp" parent="@android:style/Theme.Light.NoTitleBar">
+
+    <!-- Cor da barra de status e da barra de navegação para compatibilidade com temas claros e escuros -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- O Compose manipula as cores, então muitas definições de cores tradicionais podem ser omitidas -->
+        <!-- Estas podem ser usadas como fallback para telas que não usam Compose -->
+        <item name="android:windowLightStatusBar">true</item> <!-- Para temas claros -->
+    </style>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/spinner_race"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:entries="@array/races"
+        android:minHeight="48dp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/text_attributes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atributos" />
+
+    <Button
+        android:id="@+id/button_attack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atacar" />
+
+    <Button
+        android:id="@+id/button_show_life"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exibir Vida" />
+
+</LinearLayout>
