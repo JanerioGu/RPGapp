@@ -1,164 +1,12 @@
-package com.example.projetorpg2.kotlin
+// Raca sealed class
+package com.example.rpgapp.models
 
 import com.example.rpgapp.models.Atributos
 
 sealed class Raca {
 
     abstract fun aplicarBonus(atributos: Atributos)
-
-    object AltoElfo : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.inteligencia += 1
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Alto Elfo:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object AnãoDaColina : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.sabedoria += 1
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Anão da Colina:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object AnãoDaMontanha : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.forca += 2
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Anão da Montanha:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object Anões : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.constituicao += 2
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Anão:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object Drow : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.carisma += 1
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Anão:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object Draconato : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.carisma += 1
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Draconato:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object ElfoDaFloresta : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.sabedoria += 1
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Elfo da Floresta:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object Elfos : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.destreza += 2
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Elfo:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object Gnomo : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.inteligencia += 2
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Gnomo:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object GnomoDaFloresta : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.destreza += 1
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Gnomo da Floresta:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object GnomoDasRochas : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.constituicao += 1
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Gnomo das Rochas:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object HalflingPésLeves : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.carisma += 1
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Halfling Pés Leves:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object HalflingRobusto : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.constituicao += 1
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Halfling Robusto:")
-            exibirAtributos(atributos)
-        }
-    }
-
-    object Halflings : Raca() {
-        override fun aplicarBonus(atributos: Atributos) {
-            atributos.destreza += 2
-        }
-
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Halfling:")
-            exibirAtributos(atributos)
-        }
-    }
+    abstract override fun toString(): String
 
     object Humanos : Raca() {
         override fun aplicarBonus(atributos: Atributos) {
@@ -170,21 +18,69 @@ sealed class Raca {
             atributos.carisma += 1
         }
 
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Humano:")
-            exibirAtributos(atributos)
-        }
+        override fun toString(): String = "Humanos"
     }
 
-    object MeioElfo : Raca() {
+    object Anoes : Raca() {
         override fun aplicarBonus(atributos: Atributos) {
-            atributos.carisma += 2
+            atributos.constituicao += 2
         }
 
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Meio Elfo:")
-            exibirAtributos(atributos)
+        override fun toString(): String = "Anões"
+    }
+
+    object AltoElfo : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.inteligencia += 1
+            atributos.destreza += 2
         }
+
+        override fun toString(): String = "Alto Elfo"
+    }
+
+    object Drow : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.destreza += 2
+            atributos.carisma += 1
+        }
+
+        override fun toString(): String = "Drow"
+    }
+
+    object Draconato : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.forca += 2
+            atributos.carisma += 1
+        }
+
+        override fun toString(): String = "Draconato"
+    }
+
+    object ElfoDaFloresta : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.destreza += 2
+            atributos.sabedoria += 1
+        }
+
+        override fun toString(): String = "Elfo da Floresta"
+    }
+
+    object GnomoDasRochas : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.inteligencia += 2
+            atributos.constituicao += 1
+        }
+
+        override fun toString(): String = "Gnomo das Rochas"
+    }
+
+    object HalflingPésLeves : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.destreza += 2
+            atributos.carisma += 1
+        }
+
+        override fun toString(): String = "Halfling Pés Leves"
     }
 
     object MeioOrc : Raca() {
@@ -193,10 +89,7 @@ sealed class Raca {
             atributos.constituicao += 1
         }
 
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Meio Orc:")
-            exibirAtributos(atributos)
-        }
+        override fun toString(): String = "Meio Orc"
     }
 
     object Tiefling : Raca() {
@@ -205,14 +98,69 @@ sealed class Raca {
             atributos.carisma += 2
         }
 
-        fun mostrarAtributos(atributos: Atributos) {
-            println("Atributos do Tiefling:")
-            exibirAtributos(atributos)
+        override fun toString(): String = "Tiefling"
+    }
+
+    // Raças faltantes
+    object AnãoDaColina : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.sabedoria += 1
         }
+
+        override fun toString(): String = "Anão da Colina"
+    }
+
+    object AnãoDaMontanha : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.forca += 2
+        }
+
+        override fun toString(): String = "Anão da Montanha"
+    }
+
+    object Gnomo : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.inteligencia += 2
+        }
+
+        override fun toString(): String = "Gnomo"
+    }
+
+    object GnomoDaFloresta : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.destreza += 1
+        }
+
+        override fun toString(): String = "Gnomo da Floresta"
+    }
+
+    object HalflingRobusto : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.constituicao += 1
+        }
+
+        override fun toString(): String = "Halfling Robusto"
+    }
+
+    object Halflings : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.destreza += 2
+        }
+
+        override fun toString(): String = "Halflings"
+    }
+
+    object MeioElfo : Raca() {
+        override fun aplicarBonus(atributos: Atributos) {
+            atributos.carisma += 2
+        }
+
+        override fun toString(): String = "Meio Elfo"
     }
 
     // Método auxiliar para exibir os atributos de qualquer raça
     fun exibirAtributos(atributos: Atributos) {
+        println("Atributos:")
         println("Força: ${atributos.forca}")
         println("Destreza: ${atributos.destreza}")
         println("Constituição: ${atributos.constituicao}")
@@ -221,5 +169,3 @@ sealed class Raca {
         println("Carisma: ${atributos.carisma}")
     }
 }
-
-

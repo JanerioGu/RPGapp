@@ -1,0 +1,64 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Exibição da raça do personagem -->
+        <TextView
+            android:id="@+id/text_raca_personagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perfil Personagem"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:paddingBottom="16dp"
+            android:gravity="center"/>
+
+        <!-- Exibição dos atributos do personagem -->
+        <TextView
+            android:id="@+id/text_attributes_personagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Atributos do Personagem"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:paddingBottom="16dp"
+            android:gravity="center"/>
+
+        <!-- Botão para atacar -->
+        <Button
+            android:id="@+id/button_atacar_personagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:text="Atacar"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botão para exibir vida -->
+        <Button
+            android:id="@+id/button_exibir_vida_personagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:text="Exibir Vida"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

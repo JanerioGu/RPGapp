@@ -1,34 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:fillViewport="true">
 
-    <Spinner
-        android:id="@+id/spinner_race"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:entries="@array/races"
-        android:minHeight="48dp"
-        android:padding="8dp"/>
-
-    <TextView
-        android:id="@+id/text_attributes"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Atributos" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/button_attack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Atacar" />
+        <!-- Spinner da Raça -->
+        <Spinner
+            android:id="@+id/spinner_race"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/holo_blue_light"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
 
-    <Button
-        android:id="@+id/button_show_life"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Exibir Vida" />
+        <!-- TextView para exibir os bônus da raça -->
+        <TextView
+            android:id="@+id/text_bonus_race"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecione uma raça para ver os bônus"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp" />
 
-</LinearLayout>
+        <!-- Título dos Atributos -->
+        <TextView
+            android:id="@+id/text_attributes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Como você quer distribuir seus 27 pontos?"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center" />
+
+        <!-- Campos de Entrada (EditText) -->
+        <EditText
+            android:id="@+id/edit_forca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Força"
+            android:inputType="number"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/edit_destreza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Destreza"
+            android:inputType="number"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/edit_constituicao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Constituição"
+            android:inputType="number"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/edit_inteligencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Inteligência"
+            android:inputType="number"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/edit_sabedoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sabedoria"
+            android:inputType="number"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/edit_carisma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Carisma"
+            android:inputType="number"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp" />
+
+        <!-- Texto dos Pontos Restantes -->
+        <TextView
+            android:id="@+id/text_pontos_restantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pontos restantes: 27"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_marginBottom="16dp"
+            android:gravity="center" />
+
+        <!-- Botão Criar Personagem -->
+        <Button
+            android:id="@+id/button_create_character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:text="Criar Personagem"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
